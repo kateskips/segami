@@ -1,0 +1,2 @@
+# segami
+An image carousel
