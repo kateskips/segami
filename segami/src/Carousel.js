@@ -6,8 +6,9 @@ class Carousel extends Component {
         return(
             <div className='round'>
                 {ImageData.map((imagePhoto, index) => {
-                    return <img src={imagePhoto.image} alt='ten hundred art' />
+                    return <img src={imagePhoto.image} alt='ten hundred art' className="image" />
                 })}
+                <button>Next</button> <button>Prev</button>
             </div>
         )
     }
