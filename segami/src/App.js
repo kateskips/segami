@@ -1,15 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Carousel from './Carousel';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return(
-      <div className="App">
-         <Carousel />
-        </div>
-    )
-  }
+function App() {
+  return (
+    <>
+      <Carousel />
+    </>
+  )
 }
+
 
 export default App;
