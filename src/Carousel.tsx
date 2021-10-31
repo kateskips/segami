@@ -15,7 +15,7 @@ const Button = styled.button`
 
 
 function Carousel(props: { data: { image: string }[] }) {
-  const [images, setImage] = useState(props.data)
+  const [images, setImages] = useState(props.data)
   
   if (images.length === 0) {
     return (
@@ -34,8 +34,12 @@ function Carousel(props: { data: { image: string }[] }) {
             return <img src={image} alt='ten hundred art' className="image" />
           })}
         </div>
-        <Button className="prev-button">Prev</Button>
-        <Button className="next-button">Next</Button>
+        <Button className="prev-button" onClick={e => {
+          setImages(([first, ...rest]) => [...rest, first])
+        }}>Prev</Button>
+        <Button className="next-button" onClick={e => {
+          setImages((oldImages) => [oldImages[oldImages.length-1],...oldImages.slice(0, -1)])
+        }}>Next</Button>
       </section>
     )
   }
