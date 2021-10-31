@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Data from "./imageData.json";
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -15,8 +14,8 @@ const Button = styled.button`
 `;
 
 
-function Carousel() {
-  const [images, setImage] = useState(Data)
+function Carousel(props: { data: { image: string }[] }) {
+  const [images, setImage] = useState(props.data)
   
   if (images.length === 0) {
     return (
@@ -41,10 +40,5 @@ function Carousel() {
     )
   }
 }
-
-
-
-
-
 
 export default Carousel;
