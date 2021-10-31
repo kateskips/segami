@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Data from "./imageData";
 import styled from 'styled-components'
 
@@ -16,14 +16,14 @@ const Button = styled.button`
 
 
 function Carousel() {
-
+    const [image, setImage] = useState(Data)
     return (
         <section className='section'>
             <div className="title">
                 <h1>XXXXXX</h1>
             </div>
             <div className="the-carousel">
-                {Data.map(({image}) => {
+                {Data.map(({images}) => {
                     return <img src={image} alt='ten hundred art' className="image" />
                 })}
             </div>
