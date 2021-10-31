@@ -6,8 +6,10 @@ import Data from './imageData.json';
 function App() {
   return (
     <>
-      <Carousel data={Data}/>
-      <Carousel data={[] as {image: string}[]}/>
+      <h1>Full</h1>
+      <Carousel data={Data} />
+      <h1>Empty</h1>
+      <Carousel data={[] as { image: string }[]} />
     </>
   )
 }
