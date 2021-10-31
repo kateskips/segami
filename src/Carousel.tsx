@@ -25,9 +25,7 @@ function Carousel(props: { data: { image: string }[] }) {
         ) : (
           <>
             <div className="the-carousel">
-              {images.map(({ image }) => {
-                return <img src={image} alt='ten hundred art' className="image" />
-              })}
+              <img src={images[0].image} alt='ten hundred art' className="image" />
             </div>
             <Button className="next-button" onClick={e => {
               setImages(([first, ...rest]) => [...rest, first])
