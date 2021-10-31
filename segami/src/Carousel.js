@@ -1,5 +1,5 @@
-import React  from "react";
-import ImageData from "./imageData.json";
+import React from "react";
+import Data from "./imageData";
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -15,19 +15,25 @@ const Button = styled.button`
 `;
 
 
-const Carousel = () => {
-    return(
-        <div className='image-round'>
-            {ImageData.map((imagePhoto, index) => {
-                return <img src={imagePhoto.image} alt='ten hundred art' className="image" />
-            })}
-            <Button>Next</Button><Button>Prev</Button>
-        </div>
+function Carousel() {
+
+    return (
+        <section className='section'>
+            <div className="title">
+                <h1>XXXXXX</h1>
+            </div>
+            <div className="the-carousel">
+                {Data.map((imagePhoto, index) => {
+                    return <img src={imagePhoto.image} alt='ten hundred art' className="image" key={imagePhoto.id} />
+                })}
+            </div>
+            <Button className="prev-button">Prev</Button><Button className="next-button">Next</Button>
+        </section>
     )
 }
-    
-       
-    
+
+
+
 
 
 export default Carousel;
