@@ -23,8 +23,8 @@ function Carousel() {
                 <h1>XXXXXX</h1>
             </div>
             <div className="the-carousel">
-                {Data.map((imagePhoto, index) => {
-                    return <img src={imagePhoto.image} alt='ten hundred art' className="image" key={imagePhoto.id} />
+                {Data.map(({image}) => {
+                    return <img src={image} alt='ten hundred art' className="image" />
                 })}
             </div>
             <Button className="prev-button">Prev</Button><Button className="next-button">Next</Button>
