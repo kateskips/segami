@@ -34,12 +34,12 @@ function Carousel(props: { data: { image: string }[] }) {
             return <img src={image} alt='ten hundred art' className="image" />
           })}
         </div>
-        <Button className="prev-button" onClick={e => {
-          setImages(([first, ...rest]) => [...rest, first])
-        }}>Prev</Button>
         <Button className="next-button" onClick={e => {
-          setImages((oldImages) => [oldImages[oldImages.length-1],...oldImages.slice(0, -1)])
+          setImages(([first, ...rest]) => [...rest, first])
         }}>Next</Button>
+        <Button className="prev-button" onClick={e => {
+          setImages((oldImages) => [oldImages[oldImages.length-1],...oldImages.slice(0, -1)])
+        }}>Prev</Button>
       </section>
     )
   }
