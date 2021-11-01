@@ -6,13 +6,12 @@ import Data from './imageData.json';
 function App() {
   return (
     <>
-      <h1>Full</h1>
+      <h2>Full</h2>
       <Carousel data={Data} />
-      <h1>Empty</h1>
+      <h2>Empty</h2>
       <Carousel data={[] as { image: string }[]} />
     </>
   )
 }
-
 
 export default App;
