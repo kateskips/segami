@@ -10,7 +10,6 @@ const Button = styled.button`
   border: 2px solid palevioletred;
   border-radius: 3px;
   display: block;
-  
 `;
 
 
@@ -27,12 +26,14 @@ function Carousel(props: { data: { image: string }[] }) {
             <div className="the-carousel">
               <img src={images[0].image} alt='ten hundred art' className="image" />
             </div>
-            <Button className="next-button" onClick={e => {
-              setImages(([first, ...rest]) => [...rest, first])
-            }}>Next</Button>
-            <Button className="prev-button" onClick={e => {
-              setImages((oldImages) => [oldImages[oldImages.length - 1], ...oldImages.slice(0, -1)])
-            }}>Prev</Button>
+            <div className="buttons">
+              <Button className="next-button" onClick={e => {
+                setImages(([first, ...rest]) => [...rest, first])
+              }}>Next</Button>
+              <Button className="prev-button" onClick={e => {
+                setImages((oldImages) => [oldImages[oldImages.length - 1], ...oldImages.slice(0, -1)])
+              }}>Prev</Button>
+            </div>
           </>
         )
       }
