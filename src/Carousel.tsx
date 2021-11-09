@@ -48,8 +48,17 @@ export function Carousel(props: { images: ImagesList }) {
               }}>Next</Button>
               <Button className="prev-button" onClick={e => {
                 // rotate the array, moving the last to the beginning.
-                //The slice is the 'rest'
-                setImages((oldImages) => [oldImages[oldImages.length - 1], ...oldImages.slice(0, -1)])
+                //
+                // I want to write
+                //
+                //   setImages(([...rest, last]) => [last, ...rest])
+                //
+                // but javascript doesn't yet allow this.
+                setImages((oldImages) => {
+                  const last = oldImages[oldImages.length - 1];
+                  const rest = oldImages.slice(0, -1)
+                  return [last, ...rest]
+                })
               }}>Prev</Button>
             </div>
           </>
