@@ -34,7 +34,7 @@ export function Carousel(props: { images: ImagesList }) {
       { // ternary operator condition, carousel is either empty or not.
         (images.length === 0) ? (
           // In this case it's empty. It display no images and also no buttons.
-          <h2>No images</h2>
+          <h2></h2>
         ) : (
           // If not empty, it displays an image and both buttons. 
           <>
