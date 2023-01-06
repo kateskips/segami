@@ -1,15 +1,20 @@
 import React from 'react';
+import { Layout } from 'antd';
 import {Carousel, ImagesList} from './Carousel';
 import './App.css';
 import Data from './imageData.json';
 
+const { Content } = Layout;
+
 function App() {
   return (
     <>
-      <h2>Full</h2>
-      <Carousel images={Data} />
-      <h2>Empty</h2>
+    <Layout>
+      <Content> <Carousel images={Data} />
       <Carousel images={[] as ImagesList} />
+      </Content>
+    </Layout>
+     
     </>
   )
 }
