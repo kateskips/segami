@@ -1,7 +1,8 @@
-# segami
-
+# Segami
 An image carousel
 
-To start
+##To start
 
-npm start
+`npm install`
+
+
