@@ -1,8 +1,13 @@
 # Segami
 An image carousel
 
-##To start
+## To start
 
 `npm install`
+ 
+After installing npm
+
+`npm start`
+
 
 
